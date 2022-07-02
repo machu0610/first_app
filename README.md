@@ -1,24 +1,32 @@
-# README
+サンプル作成
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+機能一覧
+・ユーザーログイン機能
+・投稿機能
+・編集機能
+・削除機能
 
-Things you may want to cover:
+仕様
+・ユーザー登録し写真などを投稿
+・複数名の投稿内容が閲覧
+・プロフィール作成、編集
+・投稿したものを編集
 
-* Ruby version
+DB
+User
+t.string :email, null: false, default: ""
+t.string :encrypted_password, null: false, default: ""
 
-* System dependencies
+POST
+t.integer :user_id
+t.string :title
+t.text :body
+t.string :image_id
 
-* Configuration
+Controller
+・Userscontroller
+・Postscontroller
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Model
+・usermodel
+・postmodel
